@@ -1,0 +1,35 @@
+name: NLP CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.12'
+
+    - name: Install dependencies
+      run: |
+        make install
+    
+    - name: Lint code
+      run: |
+        make lint
+    
+    - name: Format code
+      run: |
+        make format
+
+    - name: Run tests
+      run: |
+        make test
