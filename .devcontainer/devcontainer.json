@@ -1,0 +1,18 @@
+{
+  "name": "My Dev Environment",
+  "image": "mcr.microsoft.com/devcontainers/universal:latest",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "GitHub.copilot"
+      ],
+      "settings": {
+        "github.copilot.enable": {
+          "*": true,
+          "plaintext": false
+        }
+      }
+    }
+  },
+  "postCreateCommand": "echo 'GitHub Copilot extension will be installed'"
+}
