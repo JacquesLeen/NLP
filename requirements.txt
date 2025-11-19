@@ -1,6 +1,7 @@
 pylint
 black
 pytest
+pytest-cov
 ipython
 textblob
 wikipedia

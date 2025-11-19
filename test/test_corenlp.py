@@ -3,7 +3,8 @@ Test module for the nlp logic library.
 """
 
 from nlp_logic import corenlp
-import wikipedia 
+import wikipedia
+
 
 def test_get_wikipedia_summary(name="Golden State Warriors"):
     """

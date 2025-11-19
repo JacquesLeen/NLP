@@ -108,9 +108,9 @@ test:
 
 format:
 	@echo "$(BLUE)Formatting code with black...$(NC)"
-	$(BLACK) $(LIB_DIR) $(TEST_DIR)
+	$(BLACK) $(LIB_DIR) $(TEST_DIR) *.py
 	@echo "$(GREEN)✓ Code formatted$(NC)"
 
-all: install lint test format
+all: install format lint test
 
 .PHONY: install lint lint-test lint-src test format all
